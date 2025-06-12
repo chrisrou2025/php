@@ -1,0 +1,105 @@
+/* style.css */
+
+/* --- Général --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #ffffff; /* FOND GÉNÉRAL EN BLANC */
+    color: #333;
+}
+
+/* --- Titre de la Page --- */
+.title {
+    text-align: center;
+    color: #0056b3;
+    margin-bottom: 30px;
+}
+
+/* --- Conteneur du Formulaire de Recherche --- */
+.search-container {
+    display: flex;
+    justify-content: center; /* Centre le formulaire */
+    margin-bottom: 30px;
+}
+
+/* --- Styles du Formulaire et de ses Éléments --- */
+.search-form-traditional {
+    display: flex;
+    gap: 15px; /* Espacement entre le champ et le bouton */
+    align-items: center; /* Centre verticalement input et bouton */
+}
+
+.search-form-traditional input[type="text"] { 
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    width: 300px;
+    font-size: 16px;
+}
+
+.search-form-traditional button { 
+    padding: 10px 20px;
+    background-color: #e0e0e0; /* Gris clair pour le fond du bouton */
+    color: #333; /* Texte gris foncé */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.search-form-traditional button:hover {
+    background-color: #cccccc; /* Gris plus foncé au survol */
+}
+
+/* --- Conteneur des Résultats des Villes --- */
+.results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les lignes de tuiles */
+    gap: 20px; /* Espacement entre les lignes de tuiles */
+    max-width: 960px; /* Limite la largeur des résultats */
+    margin: 0 auto; /* Centre le conteneur des résultats */
+}
+
+/* --- Lignes de Tuiles (pour l'affichage par 3) --- */
+.row {
+    display: flex;
+    justify-content: center; /* Centre les tuiles dans la ligne */
+    gap: 20px; /* Espacement entre les tuiles */
+    width: 100%; /* Prend toute la largeur du parent */
+    flex-wrap: wrap; /* Permet le retour à la ligne */
+}
+
+/* --- Tuiles Individuelles de Ville --- */
+.city-tile {
+    flex: 1 1 calc(33.333% - 40px); /* Taille pour 3 tuiles par ligne */
+    max-width: calc(33.333% - 40px);
+    background-color: #f0f0f0; /* Fond gris très clair pour les tuiles */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Coins légèrement arrondis */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre douce */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    min-height: 80px;
+    box-sizing: border-box; /* Inclut padding et border dans la taille */
+}
+
+.city-tile p {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+}
+
+/* --- Message "Aucun résultat" --- */
+.no-results {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    margin-top: 20px;
+}
